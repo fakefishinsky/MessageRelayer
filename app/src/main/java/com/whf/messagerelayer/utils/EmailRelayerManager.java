@@ -40,7 +40,7 @@ public class EmailRelayerManager {
 
         //是否开启SSL
         if (dataManager.getEmailSsl()){
-            if(dataManager.getEmailServicer()==Constant.EMAIL_SERVICER_OTHER){
+            if(dataManager.getEmailServicer()!=Constant.EMAIL_SERVICER_OTHER){
                 setSslMode(props,PORT_SSL);
             }else{
                 String port = dataManager.getEmailPort();
